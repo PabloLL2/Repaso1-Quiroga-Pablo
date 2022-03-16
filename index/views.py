@@ -13,7 +13,7 @@ def plantilla(request):
     datos = {
         'lista': ['primero', 'segundo', 'tercero'],
         'nombre': 'juancho',
-        'apellido': 'juancho'
+        'apellido': 'fort'
     }
 
     plantilla_generada = template.render(datos)
