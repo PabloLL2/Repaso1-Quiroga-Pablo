@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 
 
-SECRET_KEy = os.getenv('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG')
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'miproyecto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'D:\Curso CoderHouse\Trabajos\Proyectos\miproyecto\index\plantillas'],
+        'DIRS': [],
         'APP_DIRS': True, 
         'OPTIONS': {
             'context_processors': [
