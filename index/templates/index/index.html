@@ -22,23 +22,27 @@
             <div class="container">
                 <a class="navbar-brand" href={% url 'index' %}>Index</a>
                 <a class="navbar-brand" href={% url 'plantilla' %}>Plantilla </a>
+                <a class="navbar-brand" href={% url 'crear_cerrajero' %}>Crear Cerrajero </a>
+                <a class="navbar-brand" href="#">Buscar Cerrajero </a>
             </div>
         </nav>
         <!-- Masthead-->
+        {% block 'header_block' %}
         <header class="masthead">
             <div class="container position-relative">
                 <div class="row justify-content-center">
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            {% block 'header_block' %}
+                            {% block 'header_text_block' %}
                             <h1 class="mb-5">Bienvenidos a nuestra Pagina de Inicio!</h1>
-                            {% endblock 'header_block' %} 
+                            {% endblock 'header_text_block' %}
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        {% endblock 'header_block' %} 
 
         {% block  'body_block' %}
         {% endblock 'body_block' %}
