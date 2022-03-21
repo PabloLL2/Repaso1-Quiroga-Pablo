@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render
-from .models import Cerrajero, Futbolista
-from .forms import CerrajeroFormulario, CerrajeroBusqueda,FutbolistaFormulario
+from .models import Cerrajero, Futbolista, Actor
+from .forms import CerrajeroFormulario, CerrajeroBusqueda,FutbolistaFormulario, ActorFormulario
 
 # Create your views here.
 
@@ -47,3 +47,18 @@ def crear_futbolistas(request):
 
     form = FutbolistaFormulario()
     return render(request, "profesionales/crear_futbolista.html", {'form': form})
+
+def crear_actor(request):
+
+    if request.method == 'POST': 
+        form = ActorFormulario(request.POST)
+
+        if form.is_valid():
+            data = form.cleaned_data
+            actores = Actor(nombre=data['nombre'], apellido=data['apellido'], pelicula=data['pelicula'])
+            actores.save()
+            # return render(request, "index/plantilla.html", {})
+            return redirect('index')
+
+    form = ActorFormulario()
+    return render(request, "profesionales/crear_Actor.html", {'form': form})

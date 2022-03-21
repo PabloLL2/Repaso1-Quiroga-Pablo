@@ -2,23 +2,29 @@
 
 {% block 'header_text_block'%}
         <h1 class="mb-5">
-            Hola esta es mi plantilla
+            Información sobre nosotros.
         </h1>
 {% endblock 'header_text_block'%} 
         
 {% block 'body_block' %} 
     <h2>
-    {{nombre}}   
+    {{nombre1}}    
     </h2>
-    
-    {% if nombre == apellido  %}
-        <h3>{{apellido}}</h3>
-    {% endif %} 
 
-    {% for valor in lista %}
+    {% for valor in lista1 %}
         <li>
             {{valor}}
         </li>
     {% endfor %}
 
-    {% endblock 'body_block' %}
+    <h2>
+        {{nombre2}}    
+    </h2>
+
+    {% for valor in lista2 %}
+        <li>
+            {{valor}}
+        </li>
+    {% endfor %}
+    
+ {% endblock 'body_block' %}
