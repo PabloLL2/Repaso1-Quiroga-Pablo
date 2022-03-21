@@ -1,0 +1,21 @@
+{% extends 'index/index.html' %}
+
+{% block 'header_block' %}
+{% endblock 'header_block' %} 
+
+{% block 'body_block' %} 
+
+    <form action="" method='get'>
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        {% comment %} <input type="submit" value="Crear"> {% endcomment %}
+        <button>Buscar</button>
+    </form>
+
+    {% for cerrajero in cerrajeros  %}
+        <li>{{cerrajero}}</li>
+    {% endfor %}
+
+{% endblock 'body_block' %}

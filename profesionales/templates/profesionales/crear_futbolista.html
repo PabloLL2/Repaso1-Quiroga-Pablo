@@ -1,0 +1,17 @@
+{% extends 'index/index.html' %}
+
+{% block 'header_block' %}
+{% endblock 'header_block' %} 
+
+{% block 'body_block' %} 
+
+    <form action="" method='post'>
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        {% comment %} <input type="submit" value="Crear"> {% endcomment %}
+        <button>Crear</button>
+    </form>
+
+{% endblock 'body_block' %}
