@@ -4,6 +4,9 @@
 {% endblock 'header_block' %} 
 
 {% block 'body_block' %} 
+    <p>
+        <a href={% url 'crear_cerrajero'%}>Crear Cerrajero</a>
+    </p>
 
     <form action="" method='get'>
         {% csrf_token %}
@@ -15,7 +18,12 @@
     </form>
 
     {% for cerrajero in cerrajeros  %}
-        <li>{{cerrajero}}</li>
+        <li>
+            <a href={% url 'detalle_cerrajero' cerrajero.id%}>{{cerrajero}}</a> |
+            <a href={% url 'editar_cerrajero' cerrajero.id%}>Editar</a> |
+            <a href={% url 'borrar_cerrajero' cerrajero.id%}>Borrar</a>
+
+        </li>
     {% endfor %}
 
 {% endblock 'body_block' %}

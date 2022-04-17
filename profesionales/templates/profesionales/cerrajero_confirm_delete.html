@@ -7,13 +7,11 @@
     <p>
         <a href={% url 'cerrajeros'%}>Volver</a>
     </p>
+
     <form action="" method='post'>
         {% csrf_token %}
-        <table>
-            {{form.as_table}}
-        </table>
-        {% comment %} <input type="submit" value="Crear"> {% endcomment %}
-        <button>Crear</button>
+        Usted quiere borrar el cerrajero {{object}}??
+        <button>Borrar</button>
     </form>
 
 {% endblock 'body_block' %}

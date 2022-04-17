@@ -1,0 +1,18 @@
+{% extends 'index/index.html' %}
+
+{% block 'header_block' %}
+{% endblock 'header_block' %} 
+
+{% block 'body_block' %} 
+    <p>
+        <a href={% url 'cerrajeros'%}>Volver</a>
+    </p>
+
+    <p>
+        <li>Nombre: {{object.nombre}}</li>
+        <li>Apellido: {{object.apellido}}</li>
+        <li>Esta desempleado: {{object.desempleado}}</li>
+        
+    </p>
+
+{% endblock 'body_block' %}

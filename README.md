@@ -1,14 +1,25 @@
+Ingresar a la configuración:
+-----------------------------
 usuario : admin
 clave : 1234
 
-Dentro de la pagina:
-1° seleccionar crear usuario
-2° completar el formulario y enviar
-3° seleccionar escribir blog
-4° completar el formulario en blog y enviar
-5° seleccionar escribir mensaje
-6° completar el formulario en mensaje y enviar
-7° acceder a inicio y seleccionar lista usuarios para realizar una busqueda
-8° buscar el usuario creado
+-----------------------------
+-----------------------------
+
+Recorrido por las distinas paginas:
+------------------------------
+1) Pagina habilitadas:
+    a) Index
+    b) Información
+    c) Crear Cerrajero
+    d) Crear Futbolista
+    e) Crear Actor
+    f) Lista Cerrajeros
+
+2) Pagina de inicio y presentación ('INDEX').
+2) Pagina de Información de los intergrantes del grupo ('INFORMACIÓN').
+3) Crear con la iformación solicitada el formulario puntos "c, d, e".
+4) Pagina Lista Cerrajeros, se buscar el usuario creado en 'CERRAJEROS'.
+
 
 
