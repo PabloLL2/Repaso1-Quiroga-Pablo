@@ -1,4 +1,3 @@
-from dataclasses import fields
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
@@ -11,5 +10,5 @@ class NuestroUserForm(UserCreationForm):
 
     class Meta:
         model = User
-        field = ['username', 'email', 'password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2']
         helps_text = { k: '' for k in fields }
