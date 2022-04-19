@@ -1,0 +1,21 @@
+{% extends 'index/index.html' %}
+
+{% block 'header_block' %}
+{% endblock 'header_block' %} 
+
+{% block 'body_block' %} 
+    <p>
+        {% if msj %}
+            {{msj}}
+        {% endif %}
+    </p>
+
+    <form action={% url 'login'%} method='post'>
+        {% csrf_token %}
+        <table>
+            {{login_form.as_table}}
+        </table>
+        <button>Login</button>
+    </form>
+
+{% endblock 'body_block' %}

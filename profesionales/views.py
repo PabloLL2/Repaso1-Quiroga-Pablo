@@ -1,16 +1,18 @@
 from msilib.schema import Class
 from pyexpat import model
 from sre_constants import SUCCESS
-from attr import field, fields
 from django.shortcuts import redirect, render
 from .models import Cerrajero, Futbolista, Actor
 from .forms import CerrajeroFormulario, CerrajeroBusqueda,FutbolistaFormulario, ActorFormulario
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import UpdateView, DeleteView
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 
 # Create your views here.
-
+@login_required
 def crear_cerrajero(request):
 
     if request.method == 'POST': 
@@ -43,12 +45,12 @@ class DetalleCerrajero(DetailView):
     model = Cerrajero
     template_name = "profesionales/detalle_cerrajero.html"
 
-class EditarCerrajero(UpdateView):
+class EditarCerrajero(LoginRequiredMixin, UpdateView):
     model = Cerrajero
     success_url = '/profesionales/cerrajeros/'
     fields = ['nombre', 'apellido', 'desempleado']
 
-class BorrarCerrajero(DeleteView):
+class BorrarCerrajero(LoginRequiredMixin, DeleteView):
     model = Cerrajero
     success_url = '/profesionales/cerrajeros/'
 
