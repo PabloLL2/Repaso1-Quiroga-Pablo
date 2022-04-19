@@ -1,3 +1,10 @@
+-----------------------------
+-----------------------------
+Integrantes:
+Pablo Quiroga
+Nicolas Orellano
+
+-----------------------------
 Ingresar a la configuración:
 -----------------------------
 usuario : admin
